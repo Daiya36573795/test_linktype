@@ -1,0 +1,12 @@
+{
+  "name": "heroku-simple-app",
+  "version": "1.0.0",
+  "description": "A simple Node.js app for Heroku deployment",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
