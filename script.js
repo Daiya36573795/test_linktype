@@ -1,3 +1,8 @@
+function sendFlutterApp() {
+    // Flutterへデータ送信
+    flutterApp.postMessage("Post message from JavaScript!!!");
+}
+
 // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 // =====================================================
 // onLoad-Submit()
