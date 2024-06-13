@@ -117,49 +117,49 @@ async function logicProcess() {
             fd.set('hashkey'           ,order.hashkey          );
         });
         
-        // flutterApp.postMessage(
-        //     'pay_method :' + order.pay_method + ',' +
-        //     'merchant_id :' + order.merchant_id + ',' +
-        //     'service_id :' + order.service_id + ',' +
-        //     'cust_code :' + order.cust_code + ',' +
-        //     'sps_cust_no :' + order.sps_cust_no + ',' +
-        //     'sps_payment_no :' + order.sps_payment_no + ',' +
-        //     'order_id :' + order.order_id + ',' +
-        //     'item_id :' + order.item_id + ',' +
-        //     'pay_item_id :' + order.pay_item_id + ',' +
-        //     'item_name :' + order.item_name + ',' +
-        //     'tax :' + order.tax + ',' +
-        //     'amount :' + order.amount + ',' +
-        //     'pay_type :' + order.pay_type + ',' +
-        //     'auto_charge_type :' + order.auto_charge_type + ',' +
-        //     'service_type :' + order.service_type + ',' +
-        //     'div_settele :' + order.div_settele + ',' +
-        //     'last_charge_month :' + order.last_charge_month + ',' +
-        //     'camp_type :' + order.camp_type + ',' +
-        //     'tracking_id :' + order.tracking_id + ',' +
-        //     'terminal_type :' + order.terminal_type + ',' +
-        //     'success_url :' + order.success_url + ',' +
-        //     'cancel_url :' + order.cancel_url + ',' +
-        //     'error_url :' + order.error_url + ',' +
-        //     'pagecon_url :' + order.pagecon_url + ',' +
-        //     'free1 :' + order.free1 + ',' +
-        //     'free2 :' + order.free2 + ',' +
-        //     'free3 :' + order.free3 + ',' +
-        //     'free_csv :' + order.free_csv + ',' +
-        //     'dtl_rowno :' + order.orderDetail[0].dtl_rowno + ',' +
-        //     'dtl_item_id :' + order.orderDetail[0].dtl_item_id + ',' +
-        //     'dtl_item_name :' + order.orderDetail[0].dtl_item_name + ',' +
-        //     'dtl_item_count :' + order.orderDetail[0].dtl_item_count + ',' +
-        //     'dtl_tax :' + order.orderDetail[0].dtl_tax + ',' +
-        //     'dtl_amount :' + order.orderDetail[0].dtl_amount + ',' +
-        //     'dtl_free1 :' + order.orderDetail[0].dtl_free1 + ',' +
-        //     'dtl_free2 :' + order.orderDetail[0].dtl_free2 + ',' +
-        //     'dtl_free3 :' + order.orderDetail[0].dtl_free3 + ',' +
-        //     'request_date :' + order.request_date + ',' +
-        //     'limit_second :' + order.limit_second + ',' +
-        //     'sps_hashcode :' + order.sps_hashcode + ',' +
-        //     'hashkey :' + order.hashkey
-        // );
+        flutterApp.postMessage(
+            'pay_method :' + order.pay_method + ',' +
+            'merchant_id :' + order.merchant_id + ',' +
+            'service_id :' + order.service_id + ',' +
+            'cust_code :' + order.cust_code + ',' +
+            'sps_cust_no :' + order.sps_cust_no + ',' +
+            'sps_payment_no :' + order.sps_payment_no + ',' +
+            'order_id :' + order.order_id + ',' +
+            'item_id :' + order.item_id + ',' +
+            'pay_item_id :' + order.pay_item_id + ',' +
+            'item_name :' + order.item_name + ',' +
+            'tax :' + order.tax + ',' +
+            'amount :' + order.amount + ',' +
+            'pay_type :' + order.pay_type + ',' +
+            'auto_charge_type :' + order.auto_charge_type + ',' +
+            'service_type :' + order.service_type + ',' +
+            'div_settele :' + order.div_settele + ',' +
+            'last_charge_month :' + order.last_charge_month + ',' +
+            'camp_type :' + order.camp_type + ',' +
+            'tracking_id :' + order.tracking_id + ',' +
+            'terminal_type :' + order.terminal_type + ',' +
+            'success_url :' + order.success_url + ',' +
+            'cancel_url :' + order.cancel_url + ',' +
+            'error_url :' + order.error_url + ',' +
+            'pagecon_url :' + order.pagecon_url + ',' +
+            'free1 :' + order.free1 + ',' +
+            'free2 :' + order.free2 + ',' +
+            'free3 :' + order.free3 + ',' +
+            'free_csv :' + order.free_csv + ',' +
+            'dtl_rowno :' + order.orderDetail[0].dtl_rowno + ',' +
+            'dtl_item_id :' + order.orderDetail[0].dtl_item_id + ',' +
+            'dtl_item_name :' + order.orderDetail[0].dtl_item_name + ',' +
+            'dtl_item_count :' + order.orderDetail[0].dtl_item_count + ',' +
+            'dtl_tax :' + order.orderDetail[0].dtl_tax + ',' +
+            'dtl_amount :' + order.orderDetail[0].dtl_amount + ',' +
+            'dtl_free1 :' + order.orderDetail[0].dtl_free1 + ',' +
+            'dtl_free2 :' + order.orderDetail[0].dtl_free2 + ',' +
+            'dtl_free3 :' + order.orderDetail[0].dtl_free3 + ',' +
+            'request_date :' + order.request_date + ',' +
+            'limit_second :' + order.limit_second + ',' +
+            'sps_hashcode :' + order.sps_hashcode + ',' +
+            'hashkey :' + order.hashkey
+        );
         
         form.submit();
     });
