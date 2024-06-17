@@ -44,7 +44,7 @@ async function logicProcess() {
         ,""
         ,""
         ,getYYYYMMDDHHMMSS()
-        ,"9999"
+        ,"600"
         ,"d84bb8b0b3c80b3f2cae012939483e29ff7a18fa"
         ,[]
         ,""
@@ -176,8 +176,10 @@ async function logicProcess() {
 // =====================================================
 function getYYYYMMDDHHMMSS() {
     const now = new Date();
-    return now.getUTCFullYear() + zeroPadding(now.getUTCMonth() + 1) + zeroPadding(now.getUTCDate()) +
-           zeroPadding(now.getUTCHours()) + zeroPadding(now.getUTCMinutes()) + zeroPadding(now.getUTCSeconds());
+    // JST (UTC+9)の補正を加える
+    now.setHours(now.getHours() + 9);
+    return now.getFullYear() + zeroPadding(now.getMonth() + 1) + zeroPadding(now.getDate()) +
+           zeroPadding(now.getHours()) + zeroPadding(now.getMinutes()) + zeroPadding(now.getSeconds());
 }
 // =====================================================
 // zeroPadding
@@ -185,6 +187,9 @@ function getYYYYMMDDHHMMSS() {
 function zeroPadding(num) {
     return (num < 10 ? "0" + num : num.toString());
 }
+
+console.log(getYYYYMMDDHHMMSS());
+
 // =====================================================
 // encryptWithSHA1
 // =====================================================
