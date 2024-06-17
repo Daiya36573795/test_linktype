@@ -176,15 +176,15 @@ async function logicProcess() {
 // =====================================================
 function getYYYYMMDDHHMMSS() {
     const now = new Date();
-    now.setHours(16); // 時刻を15時に設定
-    return now.getFullYear() + zeroPadding(now.getMonth() + 1) + zeroPadding(now.getDate()) +
-            zeroPadding(now.getHours()) + zeroPadding(now.getMinutes()) + zeroPadding(now.getSeconds());
+    return now.getUTCFullYear() + zeroPadding(now.getUTCMonth() + 1) + zeroPadding(now.getUTCDate()) +
+           zeroPadding(now.getUTCHours()) + zeroPadding(now.getUTCMinutes()) + zeroPadding(now.getUTCSeconds());
 }
-
+// =====================================================
+// zeroPadding
+// =====================================================
 function zeroPadding(num) {
-    return num < 10 ? '0' + num : num;
+    return (num < 10 ? "0" + num : num.toString());
 }
-
 // =====================================================
 // encryptWithSHA1
 // =====================================================
