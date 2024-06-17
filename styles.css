@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+input[type="text"] {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+}
+
+input[type="button"] {
+    width: 100%;
+    max-width: 70px;
+    height: 40px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="button"]:hover {
+    background-color: #45a049;
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        margin: 10px;
+    }
+
+    input[type="text"], input[type="button"] {
+        width: 100%;
+        max-width: none;
+    }
+
+    p {
+        margin: 10px 0;
+    }
+}
