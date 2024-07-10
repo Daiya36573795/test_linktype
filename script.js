@@ -169,6 +169,25 @@ async function logicProcess() {
 // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 
+// // *****************************************************
+// // Common Function
+// // =====================================================
+// // getYYYYMMDDHHMMSS
+// // =====================================================
+// function getYYYYMMDDHHMMSS() {
+//     const now = new Date();
+//     // JST (UTC+9)の補正を加える
+//     now.setHours(now.getHours() + 9);
+//     return now.getFullYear() + zeroPadding(now.getMonth() + 1) + zeroPadding(now.getDate()) +
+//            zeroPadding(now.getHours()) + zeroPadding(now.getMinutes()) + zeroPadding(now.getSeconds());
+// }
+// // =====================================================
+// // zeroPadding
+// // =====================================================
+// function zeroPadding(num) {
+//     return (num < 10 ? "0" + num : num.toString());
+// }
+
 // *****************************************************
 // Common Function
 // =====================================================
@@ -176,17 +195,16 @@ async function logicProcess() {
 // =====================================================
 function getYYYYMMDDHHMMSS() {
     const now = new Date();
-    // JST (UTC+9)の補正を加える
-    now.setHours(now.getHours() + 9);
     return now.getFullYear() + zeroPadding(now.getMonth() + 1) + zeroPadding(now.getDate()) +
-           zeroPadding(now.getHours()) + zeroPadding(now.getMinutes()) + zeroPadding(now.getSeconds());
-}
+            zeroPadding(now.getHours()) + zeroPadding(now.getMinutes()) + zeroPadding(now.getSeconds());
+};
 // =====================================================
 // zeroPadding
 // =====================================================
 function zeroPadding(num) {
     return (num < 10 ? "0" + num : num.toString());
-}
+};
+
 
 console.log(getYYYYMMDDHHMMSS());
 
